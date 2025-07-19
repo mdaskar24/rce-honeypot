@@ -1,0 +1,33 @@
+# Ignore SQLite database files
+*.db
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore environment folders
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# Ignore IDE/editor folders
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore snapshots (if webcam images are saved)
+snapshots/
+*.jpg
+*.png
+
+# Ignore test result files
+*.out
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

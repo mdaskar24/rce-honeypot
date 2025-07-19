@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Honeypot Dashboard</title></head>
+<body>
+    <h1>Attack Logs</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <table border="1">
+        <tr><th>ID</th><th>IP</th><th>Command</th><th>Timestamp</th></tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+            <td>{{ log[2] }}</td>
+            <td>{{ log[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Snapshots</h2>
+    {% for img in snapshots %}
+        <img src="{{ url_for('static', filename='snapshots/' + img) }}" width="200" style="margin:5px;">
+    {% endfor %}
+</body>
+</html>
